@@ -71,10 +71,16 @@ html {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section - 로컬 파일 image.png 배경 지정 */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    /* 같은 폴더 안의 image.png를 불러오고, 어두운 그라데이션 레이어로 글자 가독성을 높입니다 */
+    background: linear-gradient(135deg, rgba(13, 27, 42, 0.8), rgba(27, 38, 59, 0.8)), 
+                url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
     display: flex;
     align-items: center;
@@ -87,12 +93,14 @@ html {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #adb5bd;
+    color: #e0e1dd;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 .cta-button {
